@@ -1,0 +1,28 @@
+F(IQ)
+if (c==a+b)
+cout<<'+';
+else if (c==a-b)
+cout<<'-';
+else if (c==a*b)
+cout<<'*';
+else cout<<"none";
+
+
+J(KOM)
+if (n%2==0)
+cout<<sum = 7*n+7;
+else 
+cout<<sum = 7*n+14
+
+
+M (gii)
+no_of_sem=0;
+while ((x>0 )||(y>0)){
+if (x>6)
+no_of_sem = no_of_sem+1;
+if (y>6)
+no_of_sem = no_of_sem+1;
+x=x-6;
+y=y-6;
+}
+cout<<no_of_sem;
