@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+static const string filename = "game.in";
+ifstream file(filename);
+string currentString;
+
+int main () {
+    int  a,b,c;
+    getline(file, currentString);
+    while (true) {
+        getline(file, currentString, ' ');
+        a=atoi(currentString.c_str());
+        getline(file, currentString, ' ');
+        b=atoi(currentString.c_str());
+        getline(file, currentString, ' ');
+        c=atoi(currentString.c_str());
+        if (c==a+b)
+        cout<<'+';
+        else if (c==a-b)
+        cout<<'-';
+        else if (c==a*b)
+        cout<<'*';
+        else 
+        cout<<"none";
+        
+        
+        if(cin.eof()) break;
+    }
+    return 0;}
