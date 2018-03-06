@@ -24,6 +24,4 @@ int main () {
         if(cin.eof()) break;
     }
     return 0;
-}
-    
- 
+}qqqqq
