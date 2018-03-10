@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+ 
+using namespace std;
+static const string filename = "graduation.in";
+ifstream file(filename);
+string currentString;
+ 
+int main () {
+    int x, y,no_of_sem=0 ;
+    getline(file, currentString);
+    while (true) {
+        getline(file, currentString);
+        if(file.eof()) break;
+        x = stoi(currentString.substr(0, currentString.find(" ")));
+        y = stoi(currentString.substr(currentString.find(" "), currentString.length() -1));
+        while ((x>0 )||(y>0)){
+            no_of_sem = no_of_sem + 1;
+            x = x - 6;
+            y = y - 6;
+            if (x > 6) no_of_sem = no_of_sem + 1;
+            if (y > 6) no_of_sem = no_of_sem + 1;
+        }
+        cout<<no_of_sem << endl;
+             
+    }
+    return 0;
+}

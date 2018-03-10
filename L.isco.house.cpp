@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdio.h>
 #include <fstream>
 
 using namespace std;
@@ -12,9 +13,12 @@ int main () {
     getline(file, currentString);
     while (true) {
         getline(file, currentString);
-        std::istringstream iss(text);
-        std::vector<std::string> results((std::istream_iterator<WordDelimitedBy<' '>>(iss)), std::istream_iterator<WordDelimitedBy<' '>>());
-        cout << results << endl;
+        char * pch;
+        pch = strtok (currentString," ,.-");
+        while (pch != NULL) {
+            printf ("%s\n",pch);
+            pch = strtok (NULL, " ,.-");
+        }
         // n = stoi(currentString.substr(0, currentString.find(" ")));
         // k = stoi(currentString.substr(currentString.find(" "), currentString.length() -1));
         // for (char c : currentString) {
