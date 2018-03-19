@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+ios_base::sync_with_stdio(false);
 
 int main() {
-    ios_base::sync_with_stdio(false);
+
     freopen("graduation.in" , "r" , stdin);
     int t, num;
     int x, y;
@@ -15,17 +16,7 @@ int main() {
         y1 = 0;
         num = 0;
         cin >> x >> y;
-        while (true) {
-            num ++;
-            x1 += 6;
-            if (x1 > x && y1 > y) break;
-            else {
-                y1 += 6;
-                num++;
-            }
-            if (x1 > x && y1 > y) break;
-        }
-        cout << num << endl;
+        
     }
     return 0;
 }
